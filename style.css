@@ -1,0 +1,68 @@
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+/* Навігація */
+header {
+    background: #222;
+    padding: 15px 0;
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #333;
+}
+
+/* Списки */
+ul, ol {
+    padding-left: 20px;
+}
+
+/* Посилання */
+a {
+    color: #0077cc;
+}
+
+a:hover {
+    color: #005fa3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 40px;
+}
