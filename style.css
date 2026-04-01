@@ -104,3 +104,21 @@ footer {
     margin: 0;
     color: #555;
 }
+
+/* Адаптивне меню */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+}
