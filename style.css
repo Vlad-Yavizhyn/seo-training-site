@@ -29,6 +29,7 @@ nav {
     gap: 20px;
 }
 
+/* Посилання в меню */
 nav a {
     color: #fff;
     text-decoration: none;
@@ -36,6 +37,18 @@ nav a {
 }
 
 nav a:hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
+/* Усі посилання на сайті */
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005fa3;
     text-decoration: none;
 }
 
@@ -47,17 +60,6 @@ h1, h2 {
 /* Списки */
 ul, ol {
     padding-left: 20px;
-}
-
-/* Посилання */
-a {
-    color: #0077cc;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #005fa3;
-    text-decoration: none;
 }
 
 /* Footer */
