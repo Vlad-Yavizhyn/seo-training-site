@@ -3,9 +3,27 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f1f7;
-    color: #222;
+    background: var(--bg);
+    color: var(--text);
     line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== КОЛЬОРОВІ ЗМІННІ ===== */
+:root {
+    --primary: #8a66aa;
+    --primary-dark: #6f4f8a;
+    --bg: #f4f1f7;
+    --text: #222;
+    --card-bg: #fff;
+    --card-border: #d8cbe6;
+}
+
+body.dark {
+    --bg: #1e1a22;
+    --text: #e8e0f0;
+    --card-bg: #2a2430;
+    --card-border: #4a3d55;
 }
 
 /* ===== КОНТЕЙНЕР ===== */
@@ -13,16 +31,35 @@ main {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px 15px;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
+/* ===== БАНЕР ===== */
+.banner {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    animation: fadeIn 0.8s ease;
+}
+
+.banner h1 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
 /* ===== НАВІГАЦІЯ ===== */
 header {
-    background: #8a66aa;
+    background: var(--primary);
     padding: 15px 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav {
@@ -30,6 +67,7 @@ nav {
     margin: 0 auto;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 nav a {
@@ -43,89 +81,29 @@ nav a:hover {
     color: #e6d9f2;
 }
 
-/* ===== ПОСИЛАННЯ ===== */
-a {
-    color: #8a66aa;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-a:hover {
-    color: #6f4f8a;
-}
-
-/* ===== ЗАГОЛОВКИ ===== */
-h1, h2 {
-    color: #4a2f63;
-}
-
-/* ===== КАРТКИ ===== */
-.card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-}
-
-.card {
-    background: #ffffff;
-    border: 1px solid #d8cbe6;
-    padding: 20px;
-    border-radius: 10px;
-    transition: 0.25s;
-    text-align: center;
-}
-
-.card:hover {
-    border-color: #8a66aa;
-    box-shadow: 0 4px 12px rgba(138, 102, 170, 0.25);
-    transform: translateY(-3px);
-}
-
-.card a {
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #6f4f8a;
-}
-
-.card p {
-    margin: 0;
-    color: #555;
-}
-
-/* ===== КНОПКИ ===== */
-.button {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #8a66aa;
+/* ===== БУРГЕР-МЕНЮ ===== */
+.burger {
+    display: none;
+    font-size: 26px;
     color: #fff;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.2s;
+    cursor: pointer;
 }
 
-.button:hover {
-    background: #6f4f8a;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #8a66aa;
-    color: #fff;
-    margin-top: 40px;
-}
-
-/* ===== АДАПТИВНЕ МЕНЮ ===== */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     nav {
+        display: none;
         flex-direction: column;
         gap: 10px;
         padding: 0 15px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        margin-left: 15px;
     }
 
     nav a {
@@ -138,22 +116,89 @@ footer {
     }
 }
 
+/* ===== ПОСИЛАННЯ ===== */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* ===== КАРТКИ ===== */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.25s;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(138, 102, 170, 0.25);
+    transform: translateY(-3px);
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.card a {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+}
+
+/* ===== КНОПКИ ===== */
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: var(--primary-dark);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: #fff;
+    margin-top: 40px;
+}
+
 /* ===== АДАПТИВНІ КАРТКИ ===== */
 @media (max-width: 500px) {
     .card-list {
         grid-template-columns: 1fr;
     }
+}
 
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    footer {
-        font-size: 14px;
-        padding: 15px;
-    }
+/* ===== АНІМАЦІЇ ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
