@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <nav>
+        <span class="burger" onclick="toggleMenu()">☰</span>
+        <nav id="menu">
             <a href="/seo-training-site/">Головна</a>
             <a href="/seo-training-site/exercises/">Вправи</a>
             <a href="/seo-training-site/programs/">Програми тренувань</a>
@@ -17,6 +18,12 @@
             <a href="/seo-training-site/blog/">Блог</a>
         </nav>
     </header>
+    
+    <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
 
     <main>
         <h1>Тренування з гантелями вдома для початківців і любителів</h1>
