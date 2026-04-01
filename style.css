@@ -29,7 +29,6 @@ nav {
     gap: 20px;
 }
 
-/* Посилання в меню */
 nav a {
     color: #fff;
     text-decoration: none;
@@ -41,7 +40,7 @@ nav a:hover {
     color: #ddd;
 }
 
-/* Усі посилання на сайті */
+/* Усі посилання */
 a {
     color: #0077cc;
     text-decoration: none;
@@ -60,15 +59,6 @@ h1, h2 {
 /* Списки */
 ul, ol {
     padding-left: 20px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: #fff;
-    margin-top: 40px;
 }
 
 /* Картки списків */
@@ -106,7 +96,16 @@ footer {
     color: #555;
 }
 
-/* Адаптивне меню */
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Адаптивність меню */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
@@ -121,5 +120,29 @@ footer {
 
     nav a:last-child {
         border-bottom: none;
+    }
+}
+
+/* Адаптивність карток */
+@media (max-width: 500px) {
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
     }
 }
