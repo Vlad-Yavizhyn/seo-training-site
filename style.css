@@ -52,6 +52,14 @@ main {
     color: #fff;
 }
 
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
 /* ===== НАВІГАЦІЯ ===== */
 header {
     background: var(--primary);
