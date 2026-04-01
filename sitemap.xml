@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://vlad-yavizhyn.github.io/seo-training-site/</loc>
+  </url>
+
+  <!-- Вправи -->
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-squat.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-row.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-press.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-lunge.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-biceps.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/exercises/dumbbell-triceps.html</loc></url>
+
+  <!-- Програми -->
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/programs/</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/programs/full-body.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/programs/weight-loss.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/programs/muscle-gain.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/programs/home-workout.html</loc></url>
+
+  <!-- Поради -->
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/tips/</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/tips/how-to-choose-dumbbells.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/tips/warm-up.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/tips/mistakes.html</loc></url>
+
+  <!-- Блог -->
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/blog/</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/blog/benefits-of-dumbbell-training.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/blog/how-to-start-training.html</loc></url>
+  <url><loc>https://vlad-yavizhyn.github.io/seo-training-site/blog/dumbbell-training-mistakes.html</loc></url>
+
+</urlset>
